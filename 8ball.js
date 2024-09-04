@@ -1,20 +1,21 @@
-const fortunes = [
-    { text: "without a doubt", color: "#28a745" },
-    { text: "goodluck, bad news", color: "#dc3545" },
-    { text: "ask later, im busy", color: "#ffc107" },
-    { text: "yes yes yes", color: "#007bff" },
-    { text: "better pray man", color: "#6c757d" },
-    { text: "yea but soon though", color: "#17a2b8" }
-];
+document.addEventListener('DOMContentLoaded', function() {
+    const fortunes = [
+        { text: "Yes, definitely.", color: "green" },
+        { text: "No way.", color: "red" },
+        { text: "Maybe, try again later.", color: "orange" },
+        { text: "Definitely not.", color: "darkred" },
+        { text: "It is certain.", color: "blue" },
+        { text: "Ask again later.", color: "purple" }
+    ];
 
-function getRandomFortune() {
-    const randomIndex = Math.floor(Math.random() * fortunes.length);
-    return fortunes[randomIndex];
-}
-
-document.getElementById('magicButton').addEventListener('click', () => {
-    const fortune = getRandomFortune();
     const fortuneDisplay = document.getElementById('fortuneDisplay');
-    fortuneDisplay.innerHTML = fortune.text;
-    fortuneDisplay.style.color = fortune.color;
+    const magicButton = document.getElementById('magicButton');
+
+    magicButton.addEventListener('click', function() {
+        const randomIndex = Math.floor(Math.random() * fortunes.length);
+        const selectedFortune = fortunes[randomIndex];
+
+        fortuneDisplay.innerHTML = selectedFortune.text;
+        fortuneDisplay.style.color = selectedFortune.color;
+    });
 });
