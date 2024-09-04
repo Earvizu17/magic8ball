@@ -1,4 +1,3 @@
-// Array of fortune objects with associated colors
 const fortunes = [
     { text: "without a doubt", color: "#28a745" },
     { text: "goodluck, bad news", color: "#dc3545" },
