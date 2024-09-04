@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const magicButton = document.getElementById('magicButton');
 
-    function getFortune() {
-        const randomIndex = Math.floor(Math.random() * fortunes.length);
-        const selectedFortune = fortunes[randomIndex];
-    
-        const fortuneDisplay = document.getElementById('fortuneDisplay');
-        fortuneDisplay.innerHTML = selectedFortune.text;
-        fortuneDisplay.style.color = selectedFortune.color;
-    }
+function getFortune() {
+    const randomIndex = Math.floor(Math.random() * fortunes.length);
+    const selectedFortune = fortunes[randomIndex];
+
+    const fortuneDisplay = document.getElementById('fortuneDisplay');
+    fortuneDisplay.innerHTML = selectedFortune.text;
+    fortuneDisplay.style.color = selectedFortune.color;
+}
 });
