@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', function() {
         { text: "Ask again later.", color: "purple" }
     ];
 
-    const fortuneDisplay = document.getElementById('fortuneDisplay');
     const magicButton = document.getElementById('magicButton');
 
-    magicButton.addEventListener('click', function() {
+    function getFortune() {
         const randomIndex = Math.floor(Math.random() * fortunes.length);
         const selectedFortune = fortunes[randomIndex];
-
+    
+        const fortuneDisplay = document.getElementById('fortuneDisplay');
         fortuneDisplay.innerHTML = selectedFortune.text;
         fortuneDisplay.style.color = selectedFortune.color;
-    });
+    }
 });
